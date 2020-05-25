@@ -34,7 +34,7 @@ The code to generate the JSON file can be found in the `main.py`script.
 The first step of the creation of this code was the division of the three data classes below. Then we created the methods which are the following : 
 `Book`:
 The method `get_name()` returns the name of the book then `get_lines()` divides the text in lines.
-The three following methods return a csv file with an array of the information : 
+The three following methods return a Dataframe and creates a csv file with an array of the information : 
 `spacy_pos_tagging()`separate the text in entities. 
 `spacy_get_dependencies()`is a method that uses the NLP of the text and uses the dependencies between the words in a book. 
 `spacy_df_pipe()` is a method that return spacy entities.
