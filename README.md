@@ -45,4 +45,8 @@ The method `spacy_characters()` allows access to a dictionary of characters and 
 ## Results 
 The results can be found in a JSON file in the `main.py` script.  The data are separated in an array and takes the arguments that are in the `spacy_df_pipe()` method. 
 
-All of this information can be found in the `generated_json` file.
+All of this information can be found in the `generated_json` file.  
+
+Here is a screenshot of a generated dataframe : 
+
+![DataFrame](images/df_example.png)
