@@ -2,8 +2,9 @@
 
 ## Introduction  
 
-Spacy is a Python parser for books. The code uses spaCy, a free open-source library for Natural Language Processing in Python. It is used to analyse texts by using linguistic features thanks to the NLP (Natural Language Processing). 
-This project was realised during the class “Object Oriented Programming in Python” teached by Davide Picca and assisted by Coline Métrailler.  
+Spacy is a Python parser for books. This project was realised during the class “Object Oriented Programming in Python” teached by Davide Picca and assisted by Coline Métrailler.  
+
+The code was written by : Jason Ola, Gislain Delavy, Victor Vermot-Petit- Outhenin and Caroline Roxana Rohrbach.
 
 University of Lausanne – Spring 2020
 
@@ -14,25 +15,34 @@ The generated JSON scripts are located in the generated_json folder.
 ## Dependencies
 - Python 3
 
-## Usage 
+## Objective 
 
+The objective of the project is to work with texts from Gutenberg.org, using spaCy, a free open-source library for Natural Language Processing (NLP) in Python. It is used to analyse texts by using linguistic features thanks to the NLP.
 
-The full pipeline that is used to generate the JSON file is found in the `main.py` script. 
+To do so, three dataclasses were created : 
+`Book`, `Character` ,`Line`.
 
-## Data 
-The book analyzor return data that is converted into JSON format applying the `???`method.
+The dataclass `Book` corresponds to the parsed book.
 
-## Book 
-The class book corresponds to the parsed book. 
+The dataclass `Character` corresponds to the characters from the book. 
+
+The dataclass `Line` corresponds to the tagging of paragraphs using spaCy’s NLP.
+
+The code to generate the JSON file can be found in the `main.py`script. 
+
+## Procedure 
+The first step of the creation of this code was the division of the three data classes below. Then we created the methods which are the following : 
+`Book`:
 The method `get_name()` returns the name of the book then `get_lines()` divides the text in lines.
+The three following methods return a csv file with an array of the information : 
+`spacy_pos_tagging()`separate the text in entities. 
+`spacy_get_dependencies()`is a method that uses the NLP of the text and uses the dependencies between the words in a book. 
+`spacy_df_pipe()` is a method that return spacy entities.
+`Character`
+The method `spacy_characters()` allows access to a dictionary of characters and the number of occurrence in the text.
 
 
-## Character 
-The class character corresponds to the characters from the book. 
+## Results 
+The results can be found in a JSON file in the `main.py` script.  The data are separated in an array and takes the arguments that are in the `???()` method. 
 
-The `spacy_characters()` method allows access to a dictionnary of characters and the number of apparition in the text. 
-
-## Line
-The class line corresponds to the tagging of paragraphs using spaCy’s NLP. 
-
-
+All of this information can be found in the `generated_json` file.
