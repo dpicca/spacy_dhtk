@@ -1,5 +1,5 @@
 #Insérer votre code ici
-# Classe principale Book
+#Classe principale Book
 from dataclasses import dataclass
 import pandas
 import spacy

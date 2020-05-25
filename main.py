@@ -4,7 +4,7 @@ import pandas
 
 from Book import Book
 
-ORIGINAL_TEXTES_PATH = "./"
+ORIGINAL_TEXTES_PATH = "./textes"
 GENERATED_TEXTES_PATH = "./generated_json"
 
 def main():
@@ -15,14 +15,11 @@ def main():
 
         book = Book(os.path.join(ORIGINAL_TEXTES_PATH, filename))
 
-        book_analyzed = book.spacy_char_pipe()
-        book_json = json.loads(book_analyzed.to_json())
-        book_json_string = json.dumps(book_json, indent=4)
+        book_analyzed = book.spacy_df_pipe()
+        book_json_string = book_analyzed.to_json()
 
         with open(os.path.join(GENERATED_TEXTES_PATH, f"{filename}.json"), "w") as json_files:
             json_files.write(book_json_string)
-
-
 
 
 
