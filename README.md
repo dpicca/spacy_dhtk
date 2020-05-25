@@ -33,13 +33,18 @@ The code to generate the JSON files can be found in the `main.py`script.
 ## Procedure 
 The first step of the creation of this code was the division of the three code in the tree dataclasse mentionned previously. Then we created the methods which are the following : 
 1. `Book`:
-The method `get_name()` : returns the name of the book then `get_lines()` divides the text in lines.
-The three following methods return a Dataframe and creates a csv file with an array of the informations : 
-- `spacy_pos_tagging()` : separates the text in words and give information about their grammatical or syntaxical features. 
-- `spacy_get_dependencies()` : is a method that uses the NLP of the text and returns the dependencies between words in a book. 
-- `spacy_df_pipe()` : is a method that returns entities of a text, giving informations that can be seen below on the screenshot.
+    - `get_name` : returns the name of the book.
+    - `get_lines()` divides the text into lines.
+    - `spacy_pos_tagging()` : separates the text in words and give information about their grammatical or syntaxical features. 
+    - `spacy_get_dependencies()` : is a method that uses the NLP of the text and returns the dependencies between words in a book.  
+    - `spacy_df_pipe()` : is a method that returns entities of a text, giving informations that can be seen below on the screenshot.
 2. `Character` :
-The method `spacy_characters()` allows access to a dictionary of characters and their number of occurrences in the text per paragraph.
+    - `is_char` : Checks whether an entity, like a word, is tagged as a character.
+    - `count_char` : Counts the amount of characters in a given paragraph.
+    - `sort_char` : Sort a list of characters classified by most to least commonly used.
+    - `spacy_characters()` : allows access to a dictionary of characters and their number of occurrences in the text per paragraph.
+3. `Line` :
+    - `spacy_tag` : Tags a paragraph using Spacy's NLP.
 
 
 ## Results 
