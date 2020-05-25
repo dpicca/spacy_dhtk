@@ -1,4 +1,6 @@
-#Classe Character
+from dataclasses import dataclass
+from collections import Counter, defaultdict
+
 @dataclass
 # Determine if the entity is a person
 class Character:
@@ -28,7 +30,7 @@ class Character:
     -------
     nb_char_par: int
         integer value of the number of characters
-    
+
     """
     nb_char_par = Counter()
 
