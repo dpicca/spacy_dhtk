@@ -36,12 +36,12 @@ class Book:
     def get_lines(self):
         """
         Parse the lines in a file
-            
+
         Returns
         -------
         lines: str
             lines parsed into a list
-            
+
         """
         with open(self.path, 'r', encoding='utf-8', newline='\n') as file:
             content = file.read()
@@ -50,14 +50,14 @@ class Book:
     def spacy_ner(self):
         """
         Prepares the text for spacy's NER annotation scheme
-        
+
         Returns
         -------
         paragraphs: table
             separated paragraphs of the book
         len_diffs : table
             integer of difference of length
-        
+
         """
         paragraphs = []
         len_diffs = []
@@ -66,20 +66,20 @@ class Book:
             paragraph = Line.spacy_tag(line) 
             len_diff = line_length - len(paragraph.text)
             paragraphs.append(paragraph)
-            len_diffs.append(len_diff)    
+            len_diffs.append(len_diff) 
         return paragraphs, len_diffs
 
     def spacy_char_pipe(self):
         """
         Creates a .json file containing each appearance of each character
-            
+
         Returns
         -------
         characters_sorted: list
             list of characters sorted by number of occurences
         context: list
             list of occurences of each character
-            
+
         """
         name = self.get_name()
         
