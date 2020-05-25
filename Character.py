@@ -30,7 +30,7 @@ class Character:
     -------
     nb_char_par: int
         integer value of the number of characters
-    
+
     """
     nb_char_par = Counter()
 
