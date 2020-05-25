@@ -4,7 +4,7 @@
 
 Spacy is a Python parser for books. This project was realised during the class “Object Oriented Programming in Python” teached by Davide Picca and assisted by Coline Métrailler.  
 
-The code was written by : Jason Ola, Gislain Delavy, Victor Vermot-Petit- Outhenin and Caroline Roxana Rohrbach.
+The code was written by : Jason Ola, Gislain Delavy, Victor Vermot-Petit-Outhenin and Caroline Roxana Rohrbach.
 
 University of Lausanne – Spring 2020
 
