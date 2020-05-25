@@ -1,2 +1,2 @@
-# spacy
-Code projet sur Spacy
+# Spacy DHTK  
+
