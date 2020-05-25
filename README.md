@@ -30,9 +30,9 @@ The method `get_name()` returns the name of the book then `get_lines()` divides 
 ## Character 
 The class character corresponds to the characters from the book. 
 
-The `spacy_characters()` method allows access to the list of characters and context of the apparition. 
+The `spacy_characters()` method allows access to a dictionnary of characters and the number of apparition in the text. 
 
 ## Line
-The class line corresponds to the separation in paragraphs using spaCy’s NLP. 
+The class line corresponds to the tagging of paragraphs using spaCy’s NLP. 
 
 
