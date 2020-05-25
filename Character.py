@@ -1,4 +1,6 @@
-#Classe Character
+from dataclasses import dataclass
+from collections import Counter, defaultdict
+
 @dataclass
 # Determine if the entity is a person
 class Character:
